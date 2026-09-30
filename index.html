@@ -3,133 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#087cf0">
-<meta name="description" content="NURMAT_MN — Нурмат Мирзатовдун үн жаздыруу студиясы. 5 жылдык тажрыйба. Бишкекте жана онлайн ыр жаздыруу.">
+<meta name="theme-color" content="#05070b">
+<meta name="description" content="NURMAT_MN — Бишкекте жана онлайн үн жаздыруу. Студия звукозаписи в Бишкеке и онлайн.">
 <title>NURMAT_MN — Үн жаздыруу студиясы</title>
 <style>
-:root{--blue:#087cf0;--dark:#102849;--text:#60718a;--light:#eef6ff;--line:#dbe7f5}
+:root{
+  --blue:#087cf0;
+  --bright:#48acff;
+  --bg:#05070b;
+  --surface:#0b111c;
+  --line:#243044;
+  --ink:#102849;
+  --muted:#b7c6da;
+}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;font-family:Arial,sans-serif;color:var(--dark);line-height:1.7;background:white}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{
+  margin:0;background:var(--bg);color:#fff;
+  font-family:Arial,Helvetica,sans-serif;line-height:1.7;
+}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
+img{display:block;max-width:100%}
 [hidden]{display:none!important}
-:focus-visible{outline:3px solid #39a0ff;outline-offset:4px}
+:focus-visible{outline:3px solid var(--bright);outline-offset:4px}
 .wrap{width:min(1140px,90%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line)}
-.nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:15px}
-.brand{font-size:25px;font-weight:900;letter-spacing:-1px}
-.brand span{color:var(--blue)}
-nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:bold}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 23px;border:1px solid transparent;border-radius:12px;background:var(--blue);color:white;font-weight:bold;text-align:center}
-.btn:hover{background:#0564c6}
-.btn.light{background:white;color:var(--dark);border-color:var(--line)}
-.btn.light:hover{background:var(--light)}
-.nav .btn{padding:10px 16px;min-height:44px}
-.hero{padding:70px 0;background:linear-gradient(120deg,white 35%,#e9f4ff)}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(5,7,11,.97);border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:80px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.brand{font-size:25px;font-weight:900;letter-spacing:-1px;white-space:nowrap}
+.brand span{color:var(--bright)}
+.nav-right,nav{display:flex;align-items:center;gap:22px}
+nav{font-size:14px;font-weight:700}
+.languages{display:flex;padding:4px;border:1px solid var(--line);border-radius:10px;gap:3px}
+.languages button{
+  background:transparent;color:#bfcee0;border:0;
+  padding:8px 10px;border-radius:7px;font-size:13px;font-weight:700;
+}
+.languages button.active{background:var(--blue);color:#fff}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:49px;padding:13px 22px;border:1px solid transparent;
+  border-radius:12px;background:var(--blue);color:white;
+  font-weight:700;text-align:center;transition:background .2s;
+}
+.btn:hover{background:#0666ca}
+.btn.outline{background:transparent;border-color:#405470;color:#fff}
+.btn.outline:hover{background:#152033}
+.nav .btn{min-height:43px;padding:10px 15px;font-size:14px}
+.hero{padding:75px 0;background:radial-gradient(ellipse at 85% 30%,#092343 0,transparent 55%)}
 .hero-grid,.two{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
 .hero-grid{align-items:center}
-.eyebrow{font-size:13px;font-weight:bold;letter-spacing:1.8px;color:var(--blue);text-transform:uppercase;margin:0 0 20px}
-h1{font-size:clamp(43px,5.8vw,70px);line-height:1.1;letter-spacing:-2px;margin:0 0 25px}
-h1 span{color:var(--blue)}
-h2{font-size:clamp(30px,4vw,43px);line-height:1.2;letter-spacing:-1px;margin:0 0 20px}
+.eyebrow{
+  color:var(--bright);font-size:13px;font-weight:800;
+  letter-spacing:1.6px;text-transform:uppercase;margin:0 0 20px;
+}
+h1{
+  font-size:clamp(42px,5.7vw,70px);line-height:1.1;
+  letter-spacing:-2px;margin:0 0 25px;
+}
+h1 span{display:block}
+h1 .accent{color:var(--bright)}
+h2{font-size:clamp(30px,4vw,43px);line-height:1.23;letter-spacing:-1px;margin:0 0 20px}
 h3{font-size:22px;line-height:1.4;margin:0 0 14px}
-.lead{font-size:18px;color:var(--text);line-height:1.85}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.small{font-size:14px;color:var(--text)}
-.logo-box{aspect-ratio:1;background:black;border-radius:25px;overflow:hidden;display:grid;place-items:center;box-shadow:0 25px 60px #164b8520}
-.logo-box img{display:block;width:100%;height:100%;object-fit:contain}
-.fallback{color:white;text-align:center;padding:24px}
-.fallback strong{font-size:32px}
-.fallback span{color:#00aeef}
-.experience{position:relative;margin:-28px 22px 0;background:white;padding:19px 23px;border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;gap:20px}
+.lead{font-size:18px;color:var(--muted);line-height:1.85}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.small{font-size:14px;color:var(--muted)}
+.logo-box{
+  aspect-ratio:1;background:#000;border:1px solid #263449;
+  border-radius:26px;overflow:hidden;display:grid;place-items:center;
+  box-shadow:0 25px 70px #0006;
+}
+.logo-box img{width:100%;height:100%;object-fit:contain}
+.logo-fallback{text-align:center;padding:25px}
+.logo-fallback strong{font-size:32px}
+.logo-fallback span{color:#00aeef}
+.experience{
+  position:relative;margin:-28px 22px 0;padding:20px 23px;
+  background:white;color:var(--ink);border-radius:16px;
+  display:flex;align-items:center;gap:20px;
+}
 .experience strong{font-size:44px;line-height:1;color:var(--blue)}
 .experience b{display:block}
-.experience small{font-size:13px;color:var(--text)}
+.experience small{font-size:13px;color:#60718a}
 .strip{border-block:1px solid var(--line)}
-.strip .wrap{display:flex;justify-content:space-between;gap:20px;padding:21px 0;font-size:14px;font-weight:bold}
+.strip .wrap{
+  display:flex;justify-content:space-between;gap:20px;
+  padding:22px 0;font-size:14px;font-weight:700;
+}
 section{padding:75px 0}
-.head{max-width:690px;margin-bottom:35px}
-.head p:not(.eyebrow){color:var(--text)}
+.head{max-width:720px;margin-bottom:35px}
+.head p:not(.eyebrow){color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{padding:27px;border:1px solid var(--line);border-radius:20px;background:white;display:flex;flex-direction:column}
-.card.featured{border:2px solid var(--blue);background:linear-gradient(#eef6ff,white)}
-.label{font-size:13px;font-weight:bold;color:var(--blue);margin-bottom:18px}
+.card{
+  padding:27px;background:white;color:var(--ink);
+  border:1px solid #dbe7f5;border-radius:20px;
+  display:flex;flex-direction:column;
+}
+.card.featured{border:2px solid var(--blue);background:linear-gradient(#eaf4ff,white)}
+.label{font-size:13px;font-weight:800;color:#0763c4;margin-bottom:18px}
 .price{font-size:clamp(28px,3vw,36px);font-weight:900;line-height:1.3;letter-spacing:-1px;margin:5px 0 20px}
-.price small{font-size:16px;font-weight:normal;letter-spacing:0}
-.card ul{padding-left:20px;color:var(--text);flex:1;margin:0 0 25px}
+.price small{font-size:16px;font-weight:400;letter-spacing:0}
+.card ul{padding-left:20px;color:#536780;flex:1;margin:0 0 25px}
 .card li{margin:10px 0}
 .card li::marker{color:var(--blue)}
 .card .btn{width:100%;margin-top:auto}
-.rates{font-size:14px;padding-top:12px;border-top:1px solid var(--line);margin-bottom:15px}
-.rates div{display:flex;justify-content:space-between;gap:10px;margin:8px 0}
+.card .btn.outline{color:var(--ink);border-color:#cbdcee}
+.card .btn.outline:hover{background:#edf5ff}
+.rates{font-size:14px;border-top:1px solid #dbe7f5;padding-top:12px;margin-bottom:15px}
+.rates div{display:flex;justify-content:space-between;gap:10px;margin:9px 0}
 .rates b{white-space:nowrap}
-.voice{background:var(--dark);color:white;padding:28px;border-radius:18px;margin-top:20px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.voice{
+  background:#112443;border:1px solid #254368;border-radius:18px;
+  padding:28px;margin-top:20px;display:flex;
+  justify-content:space-between;align-items:center;gap:24px;
+}
 .voice h3{margin-bottom:5px}
-.voice p{color:#c8d8ed;margin:0}
+.voice p{color:#bfd0e8;margin:0}
 .voice .price{margin:0;white-space:nowrap}
-.pale{background:var(--light)}
+.alt{background:var(--surface)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.step{border-top:2px solid #b8d6f8;padding-top:20px}
-.step>b{color:var(--blue);font-size:14px}
+.step{border-top:2px solid #294568;padding-top:20px}
+.step>b{color:var(--bright);font-size:14px}
 .step h3{margin-top:15px}
-.step p{color:var(--text)}
+.step p{color:var(--muted)}
 .rule{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
-.num{flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#dcecff;color:var(--blue);display:grid;place-items:center;font-weight:bold}
+.num{
+  flex-shrink:0;width:34px;height:34px;border-radius:10px;
+  display:grid;place-items:center;background:#142f51;color:#64b8ff;font-weight:700;
+}
 .rule h3{font-size:18px;margin-bottom:7px}
-.rule p{margin:0;color:var(--text)}
-.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:28px}
+.rule p{margin:0;color:var(--muted)}
+.panel{
+  background:white;color:var(--ink);border-radius:20px;padding:28px;
+}
 .panel+.panel{margin-top:20px}
-.panel p,.panel li{color:var(--text)}
-.panel li{margin:9px 0}
-.notice{background:#e6f1ff;border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:18px 20px;margin-top:23px;font-size:15px}
-.tags{display:flex;gap:8px;flex-wrap:wrap}
-.tags span{border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:14px;font-weight:bold}
-form{background:white;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 15px 50px #16467508}
+.panel p,.panel li{color:#536780}
+.panel li{margin:10px 0}
+.notice{
+  background:#11243c;border-left:3px solid var(--bright);
+  border-radius:0 10px 10px 0;padding:18px 20px;
+  color:#d9e8fa;font-size:15px;margin-top:23px;
+}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{border:1px solid #cbdcee;border-radius:8px;padding:6px 12px;font-size:14px;font-weight:700}
+form{
+  padding:30px;background:white;color:var(--ink);
+  border-radius:22px;box-shadow:0 15px 50px #0003;
+}
 .field{margin-bottom:19px}
-label{display:block;font-size:14px;font-weight:bold;margin-bottom:8px}
-input,select,textarea{width:100%;min-width:0;display:block;padding:13px;border:1px solid #cbdbee;border-radius:10px;background:#fbfdff;color:var(--dark);font-size:16px}
+label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+input,select,textarea{
+  display:block;width:100%;min-width:0;padding:13px;
+  border:1px solid #cbdbee;border-radius:10px;
+  background:#fbfdff;color:var(--ink);font-size:16px;
+}
 textarea{min-height:110px;resize:vertical}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 form .btn{width:100%}
-.form-note{font-size:13px;color:var(--text);margin-bottom:0}
+.form-note{font-size:13px;color:#60718a;margin-bottom:0}
 #status{font-size:14px;color:#a53122}
-.phone{display:inline-block;font-size:26px;font-weight:bold;margin-top:20px}
-.address-card{padding:30px;border:1px solid var(--line);border-radius:20px;background:var(--light)}
-.address{font-size:22px;font-weight:bold}
-.social{display:inline-block;color:var(--blue);font-weight:bold;margin-top:15px}
+.phone{display:inline-block;font-size:26px;font-weight:800;margin-top:20px}
+.social{display:inline-block;color:var(--bright);font-weight:700;margin-top:15px}
+.address-card{padding:30px;border:1px solid var(--line);border-radius:20px;background:#101b2b}
+.address{font-size:22px;font-weight:700}
 .faq{max-width:800px;margin:auto}
 details{padding:22px 0;border-bottom:1px solid var(--line)}
-summary{font-size:18px;font-weight:bold;cursor:pointer;line-height:1.5}
-details p{color:var(--text);margin-bottom:0}
-footer{background:#0c2343;color:white;padding:35px 0}
+summary{cursor:pointer;font-size:18px;font-weight:700;line-height:1.5}
+details p{color:var(--muted);margin-bottom:0}
+footer{background:#030509;border-top:1px solid var(--line);padding:35px 0}
 .footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
-footer p{font-size:14px;color:#bdcfe6}
-footer .brand span{color:#51b6ff}
-@media(max-width:950px){
-.cards{grid-template-columns:1fr}
-nav .desktop{display:none}
-.hero-grid{gap:30px}
+footer p{font-size:14px;color:var(--muted)}
+@media(max-width:1000px){
+  nav{display:none}
+  .cards{grid-template-columns:1fr}
+  .hero-grid{gap:30px}
 }
 @media(max-width:750px){
-.hero-grid,.two,.steps{grid-template-columns:1fr;gap:30px}
-.hero{padding:43px 0}
-.hero-art{max-width:460px;width:100%;margin:auto}
-section{padding:55px 0}
-.strip .wrap{flex-wrap:wrap;justify-content:center;gap:10px 20px;font-size:13px}
-.voice,.footer-row{flex-direction:column;align-items:flex-start}
-.panel,form,.address-card{padding:24px}
-h1{letter-spacing:-1.5px}
+  .hero-grid,.two,.steps{grid-template-columns:1fr;gap:30px}
+  .hero{padding:43px 0}
+  .hero-art{max-width:460px;width:100%;margin:auto}
+  section{padding:55px 0}
+  .strip .wrap{flex-wrap:wrap;justify-content:center;gap:10px 20px;font-size:13px}
+  .voice,.footer-row{flex-direction:column;align-items:flex-start}
+  .panel,form,.address-card{padding:24px}
+  h1{letter-spacing:-1.5px}
 }
-@media(max-width:400px){
-.brand{font-size:21px}
-.nav .btn{font-size:13px;padding:10px 12px}
-.row{grid-template-columns:1fr;gap:0}
-.experience{margin:-25px 13px 0;padding:17px}
+@media(max-width:420px){
+  .brand{font-size:22px}
+  .nav{gap:10px;min-height:72px}
+  .languages button{padding:8px}
+  .row{grid-template-columns:1fr;gap:0}
+  .experience{margin:-25px 13px 0;padding:17px}
 }
 @media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
 }
 </style>
 </head>
@@ -137,300 +212,271 @@ html{scroll-behavior:auto}
 
 <header>
 <div class="wrap nav">
-<a class="brand" href="#home">NURMAT<span>_MN</span></a>
-<nav aria-label="Башкы меню">
-<a class="desktop" href="#prices">Баалар</a>
-<a class="desktop" href="#online">Онлайн жаздыруу</a>
-<a class="desktop" href="#contact">Дарек</a>
-<a class="btn" href="#order">Жазылуу</a>
-</nav>
+  <a class="brand" href="#home">NURMAT<span>_MN</span></a>
+  <div class="nav-right">
+    <nav aria-label="Навигация">
+      <a href="#prices" data-i="navPrices"></a>
+      <a href="#online" data-i="navOnline"></a>
+      <a href="#contact" data-i="navContact"></a>
+      <a class="btn" href="#order" data-i="book"></a>
+    </nav>
+    <div class="languages" role="group" aria-label="Кыргызча / Русский">
+      <button type="button" data-lang="ky" lang="ky" aria-pressed="true">КЫР</button>
+      <button type="button" data-lang="ru" lang="ru" aria-pressed="false">РУС</button>
+    </div>
+  </div>
 </div>
 </header>
 
 <main id="home">
 <div class="hero">
 <div class="wrap hero-grid">
-<div>
-<p class="eyebrow">Нурмат Мирзатов · Бишкек</p>
-<h1>Сиздин үн.<br>Сиздин сезим.<br><span>Сиздин ыр.</span></h1>
-<p class="lead">Студияда жана онлайн үн жаздыруу. Вокалды иштетүү, музыкага кошуу жана даяр ыр — каалооңузга ылайык пакетти тандаңыз.</p>
-<div class="actions">
-<a class="btn" href="#prices">Пакеттерди көрүү</a>
-<a class="btn light" href="#order">Ыр жаздырууга жазылуу</a>
-</div>
-<p class="small">Киев көчөсү, 77 · «Илбирс» · 3-кабат, 12-кабинет</p>
-</div>
-
-<div class="hero-art">
-<div class="logo-box">
-<img src="logo.jpg.JPG" alt="NURMAT_MN студиясынын логотиби"
-onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='logo.jpg';}else{this.hidden=true;document.getElementById('logoFallback').hidden=false;}">
-<div class="fallback" id="logoFallback" hidden>
-<strong>NURMAT<span>_MN</span></strong>
-<p>ҮН ЖАЗДЫРУУ СТУДИЯСЫ</p>
-</div>
-</div>
-<div class="experience">
-<strong>5</strong>
-<div><b>жылдык тажрыйба</b><small>NURMAT_MN · Үн жаздыруу студиясы</small></div>
-</div>
-</div>
+  <div>
+    <p class="eyebrow" data-i="heroEyebrow"></p>
+    <h1>
+      <span data-i="hero1"></span>
+      <span data-i="hero2"></span>
+      <span class="accent" data-i="hero3"></span>
+    </h1>
+    <p class="lead" data-i="heroText"></p>
+    <div class="actions">
+      <a class="btn" href="#prices" data-i="viewPrices"></a>
+      <a class="btn outline" href="#order" data-i="bookSong"></a>
+    </div>
+    <p class="small" data-i="shortAddress"></p>
+  </div>
+  <div class="hero-art">
+    <div class="logo-box">
+      <img src="logo.jpg.JPG" alt="NURMAT_MN"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='logo.jpg';}else{this.hidden=true;document.getElementById('logoFallback').hidden=false;}">
+      <div class="logo-fallback" id="logoFallback" hidden>
+        <strong>NURMAT<span>_MN</span></strong>
+        <p data-i="studioLabel"></p>
+      </div>
+    </div>
+    <div class="experience">
+      <strong>5</strong>
+      <div><b data-i="experience"></b><small data-i="studioLabel"></small></div>
+    </div>
+  </div>
 </div>
 </div>
 
 <div class="strip">
 <div class="wrap">
-<span>Студияда жаздыруу</span>
-<span>Онлайн кызмат</span>
-<span>Вокалды иштетүү</span>
-<span>Диктордук үн</span>
+  <span data-i="strip1"></span>
+  <span data-i="strip2"></span>
+  <span data-i="strip3"></span>
+  <span data-i="strip4"></span>
 </div>
 </div>
 
 <section id="prices">
 <div class="wrap">
-<div class="head">
-<p class="eyebrow">Кызматтар жана баалар</p>
-<h2>Ырыңызга ылайык<br>пакетти тандаңыз.</h2>
-<p>Жөнөкөй үн жаздыруудан вокалды толук иштетүүгө чейин.</p>
-</div>
+  <div class="head">
+    <p class="eyebrow" data-i="priceEyebrow"></p>
+    <h2 data-i="priceTitle"></h2>
+    <p data-i="priceIntro"></p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <div class="label" data-i="basicLabel"></div>
+      <h3 data-i="basicName"></h3>
+      <div class="price">2 000 <small data-i="currency"></small></div>
+      <ul>
+        <li data-i="basic1"></li><li data-i="basic2"></li>
+        <li data-i="basic3"></li><li data-i="basic4"></li>
+      </ul>
+      <a class="btn outline" href="#order" data-package="basic" data-i="choose"></a>
+    </article>
 
-<div class="cards">
-<article class="card">
-<div class="label">01 / ЖӨНӨКӨЙ</div>
-<h3>Жөнөкөй пакет</h3>
-<div class="price">2 000 <small>сом</small></div>
-<ul>
-<li>Үн жаздыруу</li>
-<li>Үн иштетилбейт</li>
-<li>Сведение — музыка менен аралаштыруу кирбейт</li>
-<li>Даяр үн файлы WAV же MP3 форматында</li>
-</ul>
-<a class="btn light" href="#order" data-package="Жөнөкөй пакет — 2 000 сом">Пакетти тандоо</a>
-</article>
+    <article class="card">
+      <div class="label" data-i="mediumLabel"></div>
+      <h3 data-i="mediumName"></h3>
+      <div class="price">4 000–6 000 <small data-i="currency"></small></div>
+      <div class="rates">
+        <div><span data-i="solo"></span><b>4 000–5 000</b></div>
+        <div><span data-i="wedding"></span><b>5 000–6 000</b></div>
+        <div><span data-i="duet"></span><b>5 000–6 000</b></div>
+      </div>
+      <ul>
+        <li data-i="medium1"></li><li data-i="medium2"></li>
+        <li data-i="medium3"></li><li data-i="medium4"></li>
+      </ul>
+      <a class="btn outline" href="#order" data-package="medium" data-i="choose"></a>
+    </article>
 
-<article class="card">
-<div class="label">02 / ОРТОЧО</div>
-<h3>Орточо пакет</h3>
-<div class="price">4 000–6 000 <small>сом</small></div>
-<div class="rates">
-<div><span>Бир адам, бир ыр</span><b>4 000–5 000</b></div>
-<div><span>Жар-жар / кыз узатуу</span><b>5 000–6 000</b></div>
-<div><span>Дуэт</span><b>5 000–6 000</b></div>
-</div>
-<ul>
-<li>Ар бир нотаны текшерүү жана түздөө</li>
-<li>Вокалды музыкага туура келтирүү</li>
-<li>Профессионалдык эффекттер жана сведение</li>
-<li>Той, концерт, кече же өзүңүз үчүн</li>
-</ul>
-<a class="btn light" href="#order" data-package="Орточо пакет — 4 000–6 000 сом">Пакетти тандоо</a>
-</article>
+    <article class="card featured">
+      <div class="label" data-i="proLabel"></div>
+      <h3 data-i="proName"></h3>
+      <div class="price">9 000 <small data-i="currency"></small></div>
+      <ul>
+        <li data-i="pro1"></li><li data-i="pro2"></li>
+        <li data-i="pro3"></li><li data-i="pro4"></li>
+        <li data-i="pro5"></li>
+      </ul>
+      <a class="btn" href="#order" data-package="pro" data-i="choose"></a>
+    </article>
+  </div>
 
-<article class="card featured">
-<div class="label">03 / ПРОФЕССИОНАЛДЫК</div>
-<h3>Толук иштетүү</h3>
-<div class="price">9 000 <small>сом</small></div>
-<ul>
-<li>Вокалды толук профессионалдык иштетүү</li>
-<li>Ар бир нотаны кылдат түздөө</li>
-<li>Бэк-вокалдарды кошуу</li>
-<li>Профессионалдык эффекттер жана сведение</li>
-<li>Радио, телевидение, YouTube жана чыгармачылык үчүн даярдоо</li>
-</ul>
-<a class="btn" href="#order" data-package="Профессионалдык пакет — 9 000 сом">Пакетти тандоо</a>
-</article>
-</div>
-
-<div class="voice">
-<div><h3>Озвучка</h3><p>Диктордук үн жазуу жана поэзия окуу.</p></div>
-<div class="price">2 000 <small>сом</small></div>
-<a class="btn" href="#order" data-package="Озвучка — 2 000 сом">Заказ берүү</a>
-</div>
-<p class="small">Орточо пакеттин баасы адам санына жана даярдыкка жараша өзгөрүшү мүмкүн. Онлайн кызматтын баасын жана так сумманы иш башталганга чейин студия менен тактаңыз.</p>
+  <div class="voice">
+    <div><h3 data-i="voiceName"></h3><p data-i="voiceText"></p></div>
+    <div class="price">2 000 <small data-i="currency"></small></div>
+    <a class="btn" href="#order" data-package="voice" data-i="orderButton"></a>
+  </div>
+  <p class="small" data-i="priceNote"></p>
 </div>
 </section>
 
-<section class="pale" id="studio">
+<section class="alt" id="studio">
 <div class="wrap">
-<div class="head">
-<p class="eyebrow">Студияга келерден мурун</p>
-<h2>Даярдык — жакшы<br>жыйынтыктын башаты.</h2>
-<p>Келерден 2–3 саат мурун кабарлап, убакытты макулдашыңыз.</p>
-</div>
-<div class="steps">
-<article class="step">
-<b>01 / ЫРДЫ ТАНДОО</b>
-<h3>Алдын ала машыгыңыз</h3>
-<p>Ырдай турган чыгарманы тандап, жакшылап даярданыңыз. Текстин жаттай албасаңыз, телефондон карап ырдасаңыз болот.</p>
-</article>
-<article class="step">
-<b>02 / ҮН ЖАЗДЫРУУ</b>
-<h3>Студияда жардам беребиз</h3>
-<p>Музыканы үнүңүзгө ылайыктап тууралайбыз. Ката кеткен жерлерин айтып, жардам беребиз. Адатта 2–3 дубль жазылат.</p>
-</article>
-<article class="step">
-<b>03 / ДАЯР ЫР</b>
-<h3>Тандалган пакет боюнча</h3>
-<p>Иштетүү камтылган пакеттерде мыкты бөлүктөр тандалып, үн түздөлүп, музыкага кошулат. Жөнөкөй пакетте иштетилбеген үн файлы берилет.</p>
-</article>
-</div>
+  <div class="head">
+    <p class="eyebrow" data-i="prepEyebrow"></p>
+    <h2 data-i="prepTitle"></h2>
+    <p data-i="visitNotice"></p>
+  </div>
+  <div class="steps">
+    <article class="step">
+      <b>01</b><h3 data-i="step1Title"></h3><p data-i="step1Text"></p>
+    </article>
+    <article class="step">
+      <b>02</b><h3 data-i="step2Title"></h3><p data-i="step2Text"></p>
+    </article>
+    <article class="step">
+      <b>03</b><h3 data-i="step3Title"></h3><p data-i="step3Text"></p>
+    </article>
+  </div>
 </div>
 </section>
 
 <section id="online">
 <div class="wrap">
-<div class="head">
-<p class="eyebrow">Үйдөн чыкпай жаздырыңыз</p>
-<h2>Онлайн үн<br>жаздыруунун эрежелери.</h2>
-<p>Таза жазылган үн акыркы жыйынтыкка таасир берет. Жөнөтүүдөн мурун ушул тартипти аткарыңыз.</p>
-</div>
-<div class="two">
-<div>
-<div class="rule">
-<span class="num">1</span>
-<div><h3>Эки телефон даярдаңыз</h3><p>Биринчи телефондон минусту наушник аркылуу угуңуз. Экинчи телефондун диктофонуна үнүңүздү жазыңыз.</p></div>
-</div>
-<div class="rule">
-<span class="num">2</span>
-<div><h3>Музыка жазууга аралашпасын</h3><p>Музыканы наушниктен гана угуңуз. Диктофонго өзүңүздүн үнүңүз таза жазылышы керек.</p></div>
-</div>
-<div class="rule">
-<span class="num">3</span>
-<div><h3>Телефонду туруктуу коюңуз</h3><p>Телефонду колго кармабай, үстөлгө же таянычка коюңуз. Оозуңуздан болжол менен 10–15 см аралык сактаңыз.</p></div>
-</div>
-<div class="rule">
-<span class="num">4</span>
-<div><h3>Тынч бөлмө тандаңыз</h3><p>Терезени жаап, кошумча үндөрдү токтотуңуз. Жаңырыгы аз, жумшак эмеректери бар бөлмөдө жазыңыз.</p></div>
-</div>
-<div class="rule">
-<span class="num">5</span>
-<div><h3>Бир нече жолу жаздырыңыз</h3><p>Ырды даярдап, 2–3 жолу жаздырыңыз. Жакшы чыккан эки вариантты WhatsApp аркылуу жөнөтүңүз.</p></div>
-</div>
-<div class="rule">
-<span class="num">6</span>
-<div><h3>Минусун кошуңуз</h3><p>Колдонгон минусту жөнөтүңүз. YouTube'дан уксаңыз, ошол видеонун шилтемесин да кошуңуз.</p></div>
-</div>
-</div>
-
-<div>
-<div class="panel">
-<h3>Үнүңүз жаңырып жатса</h3>
-<p>Плед же калың кездеме менен чакан үн жаздыруучу бурч уюштурсаңыз болот. Жумшак материалдар жаңырыкты азайтууга жардам берет.</p>
-<p>Телефон кездемеге тийип, кытырап кетпесин. Алгач кыска сыноо жазып, наушник менен угуп көрүңүз.</p>
-</div>
-<div class="panel">
-<h3>Төлөм жана иш мөөнөтү</h3>
-<ul>
-<li>Баасын жана төлөм реквизиттерин студия менен тактаңыз.</li>
-<li>Төлөмдүн чеги келгенден кийин жумуш кезекке коюлат.</li>
-<li>Онлайн ырды даярдоо мөөнөтү — 1–3 күн. Так күнүн заказ учурунда макулдашыңыз.</li>
-</ul>
-<div class="tags"><span>MBank</span><span>О!Деньги</span><span>Бирдик</span></div>
-</div>
-<div class="notice">Үндү түздөп, музыкага кошууга болот, бирок аткарууну толугу менен өзгөртүп берүү мүмкүн эмес. Таза, так жана ритмден чыкпай ырдоого аракет кылыңыз.</div>
-</div>
-</div>
+  <div class="head">
+    <p class="eyebrow" data-i="onlineEyebrow"></p>
+    <h2 data-i="onlineTitle"></h2>
+    <p data-i="onlineIntro"></p>
+  </div>
+  <div class="two">
+    <div>
+      <div class="rule"><span class="num">1</span><div><h3 data-i="rule1Title"></h3><p data-i="rule1Text"></p></div></div>
+      <div class="rule"><span class="num">2</span><div><h3 data-i="rule2Title"></h3><p data-i="rule2Text"></p></div></div>
+      <div class="rule"><span class="num">3</span><div><h3 data-i="rule3Title"></h3><p data-i="rule3Text"></p></div></div>
+      <div class="rule"><span class="num">4</span><div><h3 data-i="rule4Title"></h3><p data-i="rule4Text"></p></div></div>
+      <div class="rule"><span class="num">5</span><div><h3 data-i="rule5Title"></h3><p data-i="rule5Text"></p></div></div>
+      <div class="rule"><span class="num">6</span><div><h3 data-i="rule6Title"></h3><p data-i="rule6Text"></p></div></div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3 data-i="echoTitle"></h3>
+        <p data-i="echoText"></p>
+        <p data-i="echoNote"></p>
+      </div>
+      <div class="panel">
+        <h3 data-i="paymentTitle"></h3>
+        <ul>
+          <li data-i="payment1"></li>
+          <li data-i="payment2"></li>
+          <li data-i="payment3"></li>
+        </ul>
+        <div class="tags">
+          <span>MBank</span><span>О!Деньги</span><span data-i="units"></span>
+        </div>
+      </div>
+      <div class="notice" data-i="qualityNote"></div>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="pale" id="order">
+<section class="alt" id="order">
 <div class="wrap two">
-<div>
-<p class="eyebrow">Биринчи кадам</p>
-<h2>Ыр жаздырууга<br>жазылыңыз.</h2>
-<p class="lead">Пакетти жана жаздыруу түрүн тандаңыз. Даяр билдирүү Нурматтын WhatsApp чатына ачылат.</p>
-<div class="notice">Форма төлөм жүргүзбөйт жана убакытты автоматтык түрдө брондобойт. Жазылуу студия менен сүйлөшүп ырасталат.</div>
-<a class="phone" href="tel:+996509202620">+996 509 202 620</a>
-</div>
+  <div>
+    <p class="eyebrow" data-i="orderEyebrow"></p>
+    <h2 data-i="orderTitle"></h2>
+    <p class="lead" data-i="orderIntro"></p>
+    <div class="notice" data-i="bookingNotice"></div>
+    <a class="phone" href="tel:+996509202620">+996 509 202 620</a>
+  </div>
 
-<form id="orderForm">
-<div class="field">
-<label for="customer">Атыңыз *</label>
-<input id="customer" autocomplete="name" maxlength="80" placeholder="Атыңызды жазыңыз" required>
-</div>
-<div class="field">
-<label for="package">Пакет</label>
-<select id="package">
-<option>Кеңеш алгым келет</option>
-<option>Жөнөкөй пакет — 2 000 сом</option>
-<option>Орточо пакет — 4 000–6 000 сом</option>
-<option>Профессионалдык пакет — 9 000 сом</option>
-<option>Озвучка — 2 000 сом</option>
-</select>
-</div>
-<div class="row">
-<div class="field">
-<label for="format">Жаздыруу түрү</label>
-<select id="format"><option>Студияда</option><option>Онлайн</option></select>
-</div>
-<div class="field">
-<label for="date">Каалаган дата</label>
-<input id="date" type="date">
-</div>
-</div>
-<div class="field">
-<label for="song">Ырдын аты же максаты</label>
-<input id="song" maxlength="150" placeholder="Мисалы: апама белек, жар-жар, дуэт">
-</div>
-<div class="field">
-<label for="message">Кошумча маалымат</label>
-<textarea id="message" maxlength="1500" placeholder="Канча адам ырдайт, качан даяр болушу керек..."></textarea>
-</div>
-<button type="submit" class="btn">WhatsApp'та улантуу</button>
-<p id="status" role="status" hidden></p>
-<p class="form-note">WhatsApp ачылгандан кийин билдирүүнү текшерип, «Жөнөтүү» басыңыз. Үн файлдарын ошол чатка өзүнчө тиркейсиз.</p>
-</form>
+  <form id="orderForm">
+    <div class="field">
+      <label for="customer" data-i="nameLabel"></label>
+      <input id="customer" autocomplete="name" maxlength="80" required data-placeholder="namePlaceholder">
+    </div>
+    <div class="field">
+      <label for="package" data-i="packageLabel"></label>
+      <select id="package">
+        <option value="consult" data-i="optionConsult"></option>
+        <option value="basic" data-i="optionBasic"></option>
+        <option value="medium" data-i="optionMedium"></option>
+        <option value="pro" data-i="optionPro"></option>
+        <option value="voice" data-i="optionVoice"></option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="format" data-i="formatLabel"></label>
+        <select id="format">
+          <option value="studio" data-i="formatStudio"></option>
+          <option value="online" data-i="formatOnline"></option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date" data-i="dateLabel"></label>
+        <input id="date" type="date">
+      </div>
+    </div>
+    <div class="field">
+      <label for="song" data-i="songLabel"></label>
+      <input id="song" maxlength="150" data-placeholder="songPlaceholder">
+    </div>
+    <div class="field">
+      <label for="message" data-i="messageLabel"></label>
+      <textarea id="message" maxlength="1500" data-placeholder="messagePlaceholder"></textarea>
+    </div>
+    <button type="submit" class="btn" data-i="submit"></button>
+    <p id="status" role="status" hidden></p>
+    <p class="form-note" data-i="formNote"></p>
+  </form>
 </div>
 </section>
 
 <section id="contact">
 <div class="wrap two">
-<div>
-<p class="eyebrow">Бизди кайдан табасыз?</p>
-<h2>Бишкектин борборунда.<br>Онлайн — сиз турган жерде.</h2>
-<p class="lead">NURMAT_MN — Нурмат Мирзатовдун үн жаздыруу студиясы. Үн жаздыруу тармагында 5 жылдык тажрыйба.</p>
-<a class="phone" href="tel:+996509202620">+996 509 202 620</a><br>
-<a class="social" href="https://www.instagram.com/nurmat_mn/" target="_blank" rel="noopener noreferrer">Instagram · @nurmat_mn</a>
-</div>
-<div class="address-card">
-<h3>Студиянын дареги</h3>
-<div class="address">Бишкек, Киев көчөсү, 77<br>«Илбирс» имараты<br>3-кабат, 12-кабинет</div>
-<p>Багыт: Ала-Тоо аянты.</p>
-<div class="notice">Келерден 2–3 саат мурун кабарлап, убакытты алдын ала макулдашыңыз.</div>
-<div class="actions">
-<a class="btn" href="https://wa.me/996509202620" target="_blank" rel="noopener noreferrer">WhatsApp'ка жазуу</a>
-<a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Бишкек%20Киевская%2077" target="_blank" rel="noopener noreferrer">Даректи картадан издөө</a>
-</div>
-</div>
+  <div>
+    <p class="eyebrow" data-i="contactEyebrow"></p>
+    <h2 data-i="contactTitle"></h2>
+    <p class="lead" data-i="aboutText"></p>
+    <a class="phone" href="tel:+996509202620">+996 509 202 620</a><br>
+    <a class="social" href="https://www.instagram.com/nurmat_mn/" target="_blank" rel="noopener noreferrer">Instagram · @nurmat_mn</a>
+  </div>
+  <div class="address-card">
+    <h3 data-i="addressTitle"></h3>
+    <div class="address">
+      <div data-i="address1"></div>
+      <div data-i="address2"></div>
+      <div data-i="address3"></div>
+    </div>
+    <p data-i="landmark"></p>
+    <div class="notice" data-i="visitNotice"></div>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/996509202620" target="_blank" rel="noopener noreferrer" data-i="writeWhatsapp"></a>
+      <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Бишкек%20Киевская%2077" target="_blank" rel="noopener noreferrer" data-i="map"></a>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="pale">
+<section class="alt">
 <div class="wrap">
 <div class="faq">
-<p class="eyebrow">Суроо-жооп</p>
-<h2>Жаздыруудан мурун.</h2>
-<details>
-<summary>Биринчи жолу ыр жаздырсам болобу?</summary>
-<p>Ооба. Ырды алдын ала тандап, машыгып келиңиз. Студияда музыканы үнүңүзгө ылайыктап, ырдоо учурунда жардам беребиз.</p>
-</details>
-<details>
-<summary>Жөнөкөй пакетке үн түздөө киреби?</summary>
-<p>Жок. Жөнөкөй пакет үн жаздырууну жана WAV же MP3 файлын берүүнү камтыйт. Үн иштетүү жана сведение кирбейт.</p>
-</details>
-<details>
-<summary>Онлайн жаздырганда эмне жөнөтөм?</summary>
-<p>Таза жазылган үнүңүздүн жакшы чыккан эки вариантын, колдонгон минусту же YouTube шилтемесин жөнөтүңүз. Музыка үн жазууга аралашпашы керек.</p>
-</details>
-<details>
-<summary>Даяр ырды качан алам?</summary>
-<p>Онлайн кызматтын көрсөтүлгөн мөөнөтү — 1–3 күн. Төлөмдүн чеги келгенден кийин жумуш кезекке коюлат. Так күнүн студия менен макулдашыңыз.</p>
-</details>
-<details>
-<summary>Студияда кантип төлөйм?</summary>
-<p>Нак акча же электрондук төлөм менен. Нак акчаны сом менен, мүмкүн болсо майдалап даярдап келиңиз. Электрондук төлөмдүн реквизиттерин Нурматтан тактаңыз.</p>
-</details>
+  <p class="eyebrow" data-i="faqEyebrow"></p>
+  <h2 data-i="faqTitle"></h2>
+  <details><summary data-i="q1"></summary><p data-i="a1"></p></details>
+  <details><summary data-i="q2"></summary><p data-i="a2"></p></details>
+  <details><summary data-i="q3"></summary><p data-i="a3"></p></details>
+  <details><summary data-i="q4"></summary><p data-i="a4"></p></details>
+  <details><summary data-i="q5"></summary><p data-i="a5"></p></details>
 </div>
 </div>
 </section>
@@ -438,68 +484,407 @@ onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='logo.jpg';
 
 <footer>
 <div class="wrap footer-row">
-<div>
-<a href="#home" class="brand">NURMAT<span>_MN</span></a>
-<p>Сиздин үнүңүз — биздин ишибиз.</p>
-</div>
-<div>
-<a href="tel:+996509202620">+996 509 202 620</a>
-<p>© <span id="year"></span> NURMAT_MN · Бишкек</p>
-</div>
+  <div>
+    <a class="brand" href="#home">NURMAT<span>_MN</span></a>
+    <p data-i="footerTag"></p>
+  </div>
+  <div>
+    <a href="tel:+996509202620">+996 509 202 620</a>
+    <p>© <span id="year"></span> NURMAT_MN · <span data-i="city"></span></p>
+  </div>
 </div>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+<noscript>
+<p style="padding:24px">
+NURMAT_MN · +996 509 202 620.
+<a href="https://wa.me/996509202620">WhatsApp</a>
+</p>
+</noscript>
 
-document.querySelectorAll("[data-package]").forEach(function(link){
-  link.addEventListener("click",function(){
+<script>
+const translations = {
+ky: {
+  title:"NURMAT_MN — Үн жаздыруу студиясы",
+  navPrices:"Баалар",
+  navOnline:"Онлайн жаздыруу",
+  navContact:"Дарек",
+  book:"Жазылуу",
+  heroEyebrow:"Нурмат Мирзатов · Бишкек",
+  hero1:"Сиздин үн.",
+  hero2:"Сиздин сезим.",
+  hero3:"Сиздин ыр.",
+  heroText:"Студияда жана онлайн үн жаздыруу. Вокалды иштетүү, музыкага кошуу жана даяр ыр — каалооңузга ылайык пакетти тандаңыз.",
+  viewPrices:"Пакеттерди көрүү",
+  bookSong:"Ыр жаздырууга жазылуу",
+  shortAddress:"Киев көчөсү, 77 · «Илбирс» · 3-кабат, 12-кабинет",
+  studioLabel:"Үн жаздыруу студиясы",
+  experience:"жылдык тажрыйба",
+  strip1:"Студияда жаздыруу",
+  strip2:"Онлайн кызмат",
+  strip3:"Вокалды иштетүү",
+  strip4:"Диктордук үн",
+  priceEyebrow:"Кызматтар жана баалар",
+  priceTitle:"Ырыңызга ылайык пакетти тандаңыз.",
+  priceIntro:"Жөнөкөй үн жаздыруудан вокалды толук иштетүүгө чейин.",
+  currency:"сом",
+  basicLabel:"01 / ЖӨНӨКӨЙ",
+  basicName:"Жөнөкөй пакет",
+  basic1:"Үн жаздыруу",
+  basic2:"Үн иштетилбейт",
+  basic3:"Сведение — музыка менен аралаштыруу кирбейт",
+  basic4:"Даяр үн файлы WAV же MP3 форматында",
+  choose:"Пакетти тандоо",
+  mediumLabel:"02 / ОРТОЧО",
+  mediumName:"Орточо пакет",
+  solo:"Бир адам, бир ыр",
+  wedding:"Жар-жар / кыз узатуу",
+  duet:"Дуэт",
+  medium1:"Ар бир нотаны текшерүү жана түздөө",
+  medium2:"Вокалды музыкага туура келтирүү",
+  medium3:"Профессионалдык эффекттер жана сведение",
+  medium4:"Той, концерт, кече же өзүңүз үчүн",
+  proLabel:"03 / ПРОФЕССИОНАЛДЫК",
+  proName:"Толук иштетүү",
+  pro1:"Вокалды толук профессионалдык иштетүү",
+  pro2:"Ар бир нотаны кылдат түздөө",
+  pro3:"Бэк-вокалдарды кошуу",
+  pro4:"Профессионалдык эффекттер жана сведение",
+  pro5:"Радио, телевидение, YouTube жана чыгармачылык үчүн даярдоо",
+  voiceName:"Озвучка",
+  voiceText:"Диктордук үн жазуу жана поэзия окуу.",
+  orderButton:"Заказ берүү",
+  priceNote:"Орточо пакеттин баасы адам санына жана даярдыкка жараша өзгөрүшү мүмкүн. Онлайн кызматтын баасын жана так сумманы иш башталганга чейин студия менен тактаңыз.",
+  prepEyebrow:"Студияга келерден мурун",
+  prepTitle:"Даярдык — жакшы жыйынтыктын башаты.",
+  visitNotice:"Келерден 2–3 саат мурун кабарлап, убакытты алдын ала макулдашыңыз.",
+  step1Title:"Алдын ала машыгыңыз",
+  step1Text:"Ырдай турган чыгарманы тандап, жакшылап даярданыңыз. Текстин жаттай албасаңыз, телефондон карап ырдасаңыз болот.",
+  step2Title:"Студияда жардам беребиз",
+  step2Text:"Музыканы үнүңүзгө ылайыктап тууралайбыз. Ката кеткен жерлерин айтып, жардам беребиз. Адатта 2–3 дубль жазылат.",
+  step3Title:"Тандалган пакет боюнча",
+  step3Text:"Иштетүү камтылган пакеттерде мыкты бөлүктөр тандалып, үн түздөлүп, музыкага кошулат. Жөнөкөй пакетте иштетилбеген үн файлы берилет.",
+  onlineEyebrow:"Үйдөн чыкпай жаздырыңыз",
+  onlineTitle:"Онлайн үн жаздыруунун эрежелери.",
+  onlineIntro:"Таза жазылган үн акыркы жыйынтыкка таасир берет. Жөнөтүүдөн мурун ушул тартипти аткарыңыз.",
+  rule1Title:"Эки телефон даярдаңыз",
+  rule1Text:"Биринчи телефондон минусту наушник аркылуу угуңуз. Экинчи телефондун диктофонуна үнүңүздү жазыңыз.",
+  rule2Title:"Музыка жазууга аралашпасын",
+  rule2Text:"Музыканы наушниктен гана угуңуз. Диктофонго өзүңүздүн үнүңүз таза жазылышы керек.",
+  rule3Title:"Телефонду туруктуу коюңуз",
+  rule3Text:"Телефонду колго кармабай, үстөлгө же таянычка коюңуз. Оозуңуздан болжол менен 10–15 см аралык сактаңыз.",
+  rule4Title:"Тынч бөлмө тандаңыз",
+  rule4Text:"Терезени жаап, кошумча үндөрдү токтотуңуз. Жаңырыгы аз, жумшак эмеректери бар бөлмөдө жазыңыз.",
+  rule5Title:"Бир нече жолу жаздырыңыз",
+  rule5Text:"Ырды даярдап, 2–3 жолу жаздырыңыз. Жакшы чыккан эки вариантты WhatsApp аркылуу жөнөтүңүз.",
+  rule6Title:"Минусун кошуңуз",
+  rule6Text:"Колдонгон минусту жөнөтүңүз. YouTube'дан уксаңыз, ошол видеонун шилтемесин да кошуңуз.",
+  echoTitle:"Үнүңүз жаңырып жатса",
+  echoText:"Плед же калың кездеме менен чакан үн жаздыруучу бурч уюштурсаңыз болот. Жумшак материалдар жаңырыкты азайтууга жардам берет.",
+  echoNote:"Телефон кездемеге тийип, кытырап кетпесин. Алгач кыска сыноо жазып, наушник менен угуп көрүңүз.",
+  paymentTitle:"Төлөм жана иш мөөнөтү",
+  payment1:"Баасын жана төлөм реквизиттерин студия менен тактаңыз.",
+  payment2:"Төлөмдүн чеги келгенден кийин жумуш кезекке коюлат.",
+  payment3:"Онлайн ырды даярдоо мөөнөтү — 1–3 күн. Так күнүн заказ учурунда макулдашыңыз.",
+  units:"Бирдик",
+  qualityNote:"Үндү түздөп, музыкага кошууга болот, бирок аткарууну толугу менен өзгөртүп берүү мүмкүн эмес. Таза, так жана ритмден чыкпай ырдоого аракет кылыңыз.",
+  orderEyebrow:"Биринчи кадам",
+  orderTitle:"Ыр жаздырууга жазылыңыз.",
+  orderIntro:"Пакетти жана жаздыруу түрүн тандаңыз. Даяр билдирүү Нурматтын WhatsApp чатына ачылат.",
+  bookingNotice:"Форма төлөм жүргүзбөйт жана убакытты автоматтык түрдө брондобойт. Жазылуу студия менен сүйлөшүп ырасталат.",
+  nameLabel:"Атыңыз *",
+  namePlaceholder:"Атыңызды жазыңыз",
+  packageLabel:"Пакет",
+  optionConsult:"Кеңеш алгым келет",
+  optionBasic:"Жөнөкөй пакет — 2 000 сом",
+  optionMedium:"Орточо пакет — 4 000–6 000 сом",
+  optionPro:"Профессионалдык пакет — 9 000 сом",
+  optionVoice:"Озвучка — 2 000 сом",
+  formatLabel:"Жаздыруу түрү",
+  formatStudio:"Студияда",
+  formatOnline:"Онлайн",
+  dateLabel:"Каалаган дата",
+  songLabel:"Ырдын аты же максаты",
+  songPlaceholder:"Мисалы: апама белек, жар-жар, дуэт",
+  messageLabel:"Кошумча маалымат",
+  messagePlaceholder:"Канча адам ырдайт, качан даяр болушу керек...",
+  submit:"WhatsApp'та улантуу",
+  formNote:"WhatsApp ачылгандан кийин билдирүүнү текшерип, «Жөнөтүү» басыңыз. Үн файлдарын ошол чатка өзүнчө тиркейсиз.",
+  contactEyebrow:"Бизди кайдан табасыз?",
+  contactTitle:"Бишкектин борборунда. Онлайн — сиз турган жерде.",
+  aboutText:"NURMAT_MN — Нурмат Мирзатовдун үн жаздыруу студиясы. Үн жаздыруу тармагында 5 жылдык тажрыйба.",
+  addressTitle:"Студиянын дареги",
+  address1:"Бишкек, Киев көчөсү, 77",
+  address2:"«Илбирс» имараты",
+  address3:"3-кабат, 12-кабинет",
+  landmark:"Багыт: Ала-Тоо аянты.",
+  writeWhatsapp:"WhatsApp'ка жазуу",
+  map:"Даректи картадан издөө",
+  faqEyebrow:"Суроо-жооп",
+  faqTitle:"Жаздыруудан мурун.",
+  q1:"Биринчи жолу ыр жаздырсам болобу?",
+  a1:"Ооба. Ырды алдын ала тандап, машыгып келиңиз. Студияда музыканы үнүңүзгө ылайыктап, ырдоо учурунда жардам беребиз.",
+  q2:"Жөнөкөй пакетке үн түздөө киреби?",
+  a2:"Жок. Жөнөкөй пакет үн жаздырууну жана WAV же MP3 файлын берүүнү камтыйт. Үн иштетүү жана сведение кирбейт.",
+  q3:"Онлайн жаздырганда эмне жөнөтөм?",
+  a3:"Таза жазылган үнүңүздүн жакшы чыккан эки вариантын, колдонгон минусту же YouTube шилтемесин жөнөтүңүз. Музыка үн жазууга аралашпашы керек.",
+  q4:"Даяр ырды качан алам?",
+  a4:"Онлайн кызматтын көрсөтүлгөн мөөнөтү — 1–3 күн. Төлөмдүн чеги келгенден кийин жумуш кезекке коюлат. Так күнүн студия менен макулдашыңыз.",
+  q5:"Студияда кантип төлөйм?",
+  a5:"Нак акча же электрондук төлөм менен. Нак акчаны сом менен, мүмкүн болсо майдалап даярдап келиңиз. Электрондук төлөмдүн реквизиттерин Нурматтан тактаңыз.",
+  footerTag:"Сиздин үнүңүз — биздин ишибиз.",
+  city:"Бишкек",
+  errorName:"Сураныч, атыңызды жазыңыз.",
+  waHello:"Саламатсызбы, Нурмат!",
+  waIntro:"NURMAT_MN сайтынан жаздыруу боюнча кайрылып жатам.",
+  waName:"Атым",
+  waDate:"Каалаган дата",
+  waEnd:"Так баасын, бош убакытты жана даярдоо мөөнөтүн айтып коёсузбу?",
+  clarify:"Сүйлөшүп тактайбыз",
+  none:"Жок"
+},
+ru: {
+  title:"NURMAT_MN — Студия звукозаписи",
+  navPrices:"Цены",
+  navOnline:"Онлайн-запись",
+  navContact:"Адрес",
+  book:"Записаться",
+  heroEyebrow:"Нурмат Мирзатов · Бишкек",
+  hero1:"Ваш голос.",
+  hero2:"Ваши чувства.",
+  hero3:"Ваша песня.",
+  heroText:"Запись голоса в студии и онлайн. Обработка вокала, сведение с музыкой и готовая песня — выберите подходящий пакет.",
+  viewPrices:"Посмотреть пакеты",
+  bookSong:"Записаться на запись",
+  shortAddress:"Киевская, 77 · «Илбирс» · 3-й этаж, кабинет 12",
+  studioLabel:"Студия звукозаписи",
+  experience:"лет опыта",
+  strip1:"Запись в студии",
+  strip2:"Работа онлайн",
+  strip3:"Обработка вокала",
+  strip4:"Дикторская озвучка",
+  priceEyebrow:"Услуги и цены",
+  priceTitle:"Выберите пакет для вашей песни.",
+  priceIntro:"От простой записи голоса до полной обработки вокала.",
+  currency:"сом",
+  basicLabel:"01 / ПРОСТОЙ",
+  basicName:"Простой пакет",
+  basic1:"Запись голоса",
+  basic2:"Без обработки",
+  basic3:"Без сведения с музыкой",
+  basic4:"Готовый голосовой файл в формате WAV или MP3",
+  choose:"Выбрать пакет",
+  mediumLabel:"02 / СРЕДНИЙ",
+  mediumName:"Средний пакет",
+  solo:"Один человек, одна песня",
+  wedding:"Жар-жар / кыз узатуу",
+  duet:"Дуэт",
+  medium1:"Проверка и коррекция каждой ноты",
+  medium2:"Выравнивание вокала под музыку",
+  medium3:"Профессиональные эффекты и сведение",
+  medium4:"Для свадьбы, концерта, вечера или для себя",
+  proLabel:"03 / ПРОФЕССИОНАЛЬНЫЙ",
+  proName:"Полная обработка",
+  pro1:"Полная профессиональная обработка вокала",
+  pro2:"Точная коррекция каждой ноты",
+  pro3:"Добавление бэк-вокала",
+  pro4:"Профессиональные эффекты и сведение",
+  pro5:"Подготовка для радио, телевидения, YouTube и творческих проектов",
+  voiceName:"Озвучка",
+  voiceText:"Запись дикторского голоса и чтение поэзии.",
+  orderButton:"Заказать",
+  priceNote:"Стоимость среднего пакета может меняться в зависимости от количества исполнителей и подготовки. Стоимость онлайн-услуги и итоговую сумму уточняйте в студии до начала работы.",
+  prepEyebrow:"Перед посещением студии",
+  prepTitle:"Хорошая подготовка — основа результата.",
+  visitNotice:"Сообщите о визите за 2–3 часа и заранее согласуйте время.",
+  step1Title:"Порепетируйте заранее",
+  step1Text:"Выберите песню и хорошо подготовьтесь. Если не получилось выучить текст, можно петь, читая с телефона.",
+  step2Title:"Поможем в студии",
+  step2Text:"Подстроим музыку под ваш голос, подскажем и поможем исправить ошибки во время исполнения. Обычно записываем 2–3 дубля.",
+  step3Title:"По выбранному пакету",
+  step3Text:"В пакетах с обработкой выбираем лучшие фрагменты, корректируем вокал и сводим его с музыкой. В простом пакете выдаём необработанную запись голоса.",
+  onlineEyebrow:"Записывайтесь из дома",
+  onlineTitle:"Правила онлайн-записи голоса.",
+  onlineIntro:"Чистота исходной записи влияет на результат. Перед отправкой файлов следуйте этим рекомендациям.",
+  rule1Title:"Подготовьте два телефона",
+  rule1Text:"На первом слушайте минус в наушниках. На диктофон второго записывайте свой голос.",
+  rule2Title:"Музыка не должна попадать в запись",
+  rule2Text:"Слушайте музыку только через наушники. На диктофон должен записываться ваш чистый голос.",
+  rule3Title:"Установите телефон устойчиво",
+  rule3Text:"Не держите телефон в руках: поставьте его на стол или подставку. Расстояние от рта — примерно 10–15 см.",
+  rule4Title:"Выберите тихую комнату",
+  rule4Text:"Закройте окно и уберите посторонние звуки. Записывайтесь в комнате с мягкой мебелью и минимальным эхом.",
+  rule5Title:"Запишите несколько дублей",
+  rule5Text:"Подготовьте песню и запишите 2–3 дубля. Отправьте два лучших варианта через WhatsApp.",
+  rule6Title:"Приложите минус",
+  rule6Text:"Отправьте использованную фонограмму. Если слушали музыку на YouTube, приложите ссылку на это видео.",
+  echoTitle:"Если в записи слышно эхо",
+  echoText:"Можно организовать небольшой уголок для записи с помощью пледа или плотной ткани. Мягкие материалы помогают уменьшить эхо.",
+  echoNote:"Телефон не должен касаться ткани и записывать шорохи. Сначала сделайте короткую пробную запись и прослушайте её в наушниках.",
+  paymentTitle:"Оплата и сроки",
+  payment1:"Уточните стоимость и реквизиты оплаты у студии.",
+  payment2:"После получения чека работа ставится в очередь.",
+  payment3:"Срок подготовки онлайн-песни — 1–3 дня. Точную дату согласуйте при заказе.",
+  units:"Единицы",
+  qualityNote:"Голос можно скорректировать и свести с музыкой, но полностью изменить исполнение нельзя. Старайтесь петь чисто, чётко и в ритм.",
+  orderEyebrow:"Первый шаг",
+  orderTitle:"Запишитесь на запись песни.",
+  orderIntro:"Выберите пакет и формат записи. Готовое сообщение откроется в WhatsApp-чате Нурмата.",
+  bookingNotice:"Форма не проводит оплату и не бронирует время автоматически. Запись подтверждается после согласования со студией.",
+  nameLabel:"Ваше имя *",
+  namePlaceholder:"Введите ваше имя",
+  packageLabel:"Пакет",
+  optionConsult:"Нужна консультация",
+  optionBasic:"Простой пакет — 2 000 сом",
+  optionMedium:"Средний пакет — 4 000–6 000 сом",
+  optionPro:"Профессиональный пакет — 9 000 сом",
+  optionVoice:"Озвучка — 2 000 сом",
+  formatLabel:"Формат записи",
+  formatStudio:"В студии",
+  formatOnline:"Онлайн",
+  dateLabel:"Желаемая дата",
+  songLabel:"Название песни или повод",
+  songPlaceholder:"Например: подарок маме, жар-жар, дуэт",
+  messageLabel:"Дополнительная информация",
+  messagePlaceholder:"Сколько исполнителей, когда нужен результат...",
+  submit:"Продолжить в WhatsApp",
+  formNote:"После открытия WhatsApp проверьте сообщение и нажмите «Отправить». Голосовые файлы прикрепите отдельно в этом чате.",
+  contactEyebrow:"Где нас найти",
+  contactTitle:"В центре Бишкека. Онлайн — там, где вы.",
+  aboutText:"NURMAT_MN — студия звукозаписи Нурмата Мирзатова. 5 лет опыта в сфере звукозаписи.",
+  addressTitle:"Адрес студии",
+  address1:"Бишкек, ул. Киевская, 77",
+  address2:"Здание «Илбирс»",
+  address3:"3-й этаж, кабинет 12",
+  landmark:"Ориентир: площадь Ала-Тоо.",
+  writeWhatsapp:"Написать в WhatsApp",
+  map:"Найти адрес на карте",
+  faqEyebrow:"Вопросы и ответы",
+  faqTitle:"Перед записью.",
+  q1:"Можно записаться, если я пою впервые?",
+  a1:"Да. Заранее выберите песню и порепетируйте. В студии подстроим музыку под ваш голос и поможем во время исполнения.",
+  q2:"Входит ли коррекция голоса в простой пакет?",
+  a2:"Нет. Простой пакет включает запись голоса и выдачу файла WAV или MP3. Обработка и сведение не входят.",
+  q3:"Что отправлять для онлайн-записи?",
+  a3:"Два лучших варианта чистой записи голоса, использованный минус или ссылку на YouTube. Музыка не должна попадать в запись голоса.",
+  q4:"Когда будет готова песня?",
+  a4:"Указанный срок онлайн-услуги — 1–3 дня. После получения чека работа ставится в очередь. Точную дату согласуйте со студией.",
+  q5:"Как оплатить в студии?",
+  a5:"Наличными или электронным переводом. Подготовьте сомы, по возможности без крупных купюр. Реквизиты электронного платежа уточните у Нурмата.",
+  footerTag:"Ваш голос — наша работа.",
+  city:"Бишкек",
+  errorName:"Пожалуйста, введите ваше имя.",
+  waHello:"Здравствуйте, Нурмат!",
+  waIntro:"Обращаюсь по поводу записи с сайта NURMAT_MN.",
+  waName:"Меня зовут",
+  waDate:"Желаемая дата",
+  waEnd:"Подскажите точную стоимость, свободное время и срок готовности.",
+  clarify:"Уточним при обсуждении",
+  none:"Нет"
+}
+};
+
+let currentLanguage = "ky";
+
+try {
+  const savedLanguage = localStorage.getItem("nurmat-language");
+  if (savedLanguage === "ky" || savedLanguage === "ru") {
+    currentLanguage = savedLanguage;
+  }
+} catch (error) {}
+
+function setLanguage(language) {
+  if (!translations[language]) return;
+  currentLanguage = language;
+  const text = translations[language];
+
+  document.documentElement.lang = language;
+  document.title = text.title;
+
+  document.querySelectorAll("[data-i]").forEach(function(element) {
+    const key = element.dataset.i;
+    if (text[key] !== undefined) element.textContent = text[key];
+  });
+
+  document.querySelectorAll("[data-placeholder]").forEach(function(element) {
+    element.placeholder = text[element.dataset.placeholder];
+  });
+
+  document.querySelectorAll("[data-lang]").forEach(function(button) {
+    const selected = button.dataset.lang === language;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+
+  const status = document.getElementById("status");
+  if (!status.hidden) status.textContent = text.errorName;
+
+  try {
+    localStorage.setItem("nurmat-language", language);
+  } catch (error) {}
+}
+
+document.querySelectorAll("[data-lang]").forEach(function(button) {
+  button.addEventListener("click", function() {
+    setLanguage(button.dataset.lang);
+  });
+});
+
+document.querySelectorAll("[data-package]").forEach(function(link) {
+  link.addEventListener("click", function() {
     document.getElementById("package").value = link.dataset.package;
   });
 });
 
-document.getElementById("orderForm").addEventListener("submit",function(event){
+document.getElementById("year").textContent = new Date().getFullYear();
+setLanguage(currentLanguage);
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
+  const text = translations[currentLanguage];
   const nameInput = document.getElementById("customer");
   const name = nameInput.value.trim();
   const status = document.getElementById("status");
 
-  if(!name){
+  if (!name) {
     status.hidden = false;
-    status.textContent = "Сураныч, атыңызды жазыңыз.";
+    status.textContent = text.errorName;
     nameInput.focus();
     return;
   }
 
-  const selectedPackage = document.getElementById("package").value;
-  const format = document.getElementById("format").value;
+  const packageSelect = document.getElementById("package");
+  const formatSelect = document.getElementById("format");
+  const selectedPackage = packageSelect.options[packageSelect.selectedIndex].textContent;
+  const selectedFormat = formatSelect.options[formatSelect.selectedIndex].textContent;
   const rawDate = document.getElementById("date").value;
   const song = document.getElementById("song").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  let dateText = "Сүйлөшүп тактайбыз";
-  if(rawDate){
+  let dateText = text.clarify;
+  if (rawDate) {
     const parts = rawDate.split("-");
-    dateText = parts[2]+"."+parts[1]+"."+parts[0];
+    dateText = parts[2] + "." + parts[1] + "." + parts[0];
   }
 
-  const text = [
-    "Саламатсызбы, Нурмат!",
-    "NURMAT_MN сайтынан жаздыруу боюнча кайрылып жатам.",
+  const content = [
+    text.waHello,
+    text.waIntro,
     "",
-    "Атым: "+name,
-    "Пакет: "+selectedPackage,
-    "Жаздыруу түрү: "+format,
-    "Каалаган дата: "+dateText,
-    "Ырдын аты / максаты: "+(song || "Тактайбыз"),
-    "Кошумча маалымат: "+(message || "Жок"),
+    text.waName + ": " + name,
+    text.packageLabel + ": " + selectedPackage,
+    text.formatLabel + ": " + selectedFormat,
+    text.waDate + ": " + dateText,
+    text.songLabel + ": " + (song || text.clarify),
+    text.messageLabel + ": " + (message || text.none),
     "",
-    "Так баасын, бош убакытты жана даярдоо мөөнөтүн айтып коёсузбу?"
+    text.waEnd
   ].join("\n");
 
   status.hidden = true;
-  window.location.href = "https://wa.me/996509202620?text="+encodeURIComponent(text);
+  window.location.href =
+    "https://wa.me/996509202620?text=" + encodeURIComponent(content);
 });
 </script>
 </body>
